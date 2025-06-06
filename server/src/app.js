@@ -9,9 +9,9 @@ app.use(morgan('combined')); // Used to log out data
 app.use(cors()); // Allows any host or client to access this
 
 // Creating a request at a /status endpoint
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
     res.send({
-        message: "This is a message"
+        message: `Hello ${req.body.email}! Your user was register! Have fun!`
     });
 });
 
